@@ -26,6 +26,16 @@ const router = createRouter({
       path: '/VonAndVifAndVshow',
       name: 'VonAndVifAndVshow',
       component: () => import('../views/VonAndVifAndVshow.vue')
+    },
+    {
+      path: '/Props',
+      name: 'Props',
+      component: () => import('../views/Props.vue')
+    },
+    {
+      path: '/Emit',
+      name: 'Emit',
+      component: () => import('../views/Emit.vue')
     }
   ]
 })
