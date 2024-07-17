@@ -1,5 +1,7 @@
 <script>
 import propChild from '../components/PropsComponent.vue'
+import location from "../stores/location"
+import { mapActions } from 'pinia'
 
 export default{
     data(){
@@ -13,6 +15,12 @@ export default{
     },
     components:{
         propChild,
+    },
+    methods:{
+        ...mapActions(location, ["setPages"])
+    },
+    mounted(){
+        this.setPages(5)
     }
 }
 </script>

@@ -1,26 +1,31 @@
 <script>
-import vfor from '../components/VforComponent.vue'
-import vbindCom from '../components/VBindComponent.vue'
+import watchChild from '../components/WatchComponent.vue'
+import computedChild from '../components/ComputedComponent.vue'
 import location from "../stores/location"
 import { mapActions } from 'pinia'
 
+
 export default{
+    data(){
+        return{
+        }
+    },
     components:{
-        vfor,
-        vbindCom
+        watchChild,
+        computedChild
     },
     methods:{
         ...mapActions(location, ["setPages"])
     },
     mounted(){
-        this.setPages(3)
+        this.setPages(7)
     }
 }
 </script>
 
 <template>
-    <vfor />
-    <vbindCom />
+    <watchChild/>
+    <computedChild/>
 </template>
 
 <style scoped lang="scss">

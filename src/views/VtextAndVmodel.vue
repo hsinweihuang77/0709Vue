@@ -1,4 +1,7 @@
 <script>
+import location from "../stores/location"
+import { mapActions } from 'pinia'
+
 export default{
     data(){ //data:function()
         return{
@@ -8,6 +11,12 @@ export default{
             modelCheck:[], //複選用陣列
             modelSelect:"",
         }
+    },
+    methods:{
+        ...mapActions(location, ["setPages"])
+    },
+    mounted(){
+        this.setPages(2)
     }
 }
 </script>

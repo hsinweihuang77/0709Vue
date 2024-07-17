@@ -36,6 +36,11 @@ const router = createRouter({
       path: '/Emit',
       name: 'Emit',
       component: () => import('../views/Emit.vue')
+    },
+    {
+      path: '/WatchAndComputed',
+      name: 'WatchAndComputed',
+      component: () => import('../views/WatchAndComputed.vue')
     }
   ]
 })

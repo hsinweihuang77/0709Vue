@@ -1,5 +1,7 @@
 <script>
 import emitChild from '../components/EmitComponent.vue'
+import location from "../stores/location"
+import { mapActions } from 'pinia'
 
 export default{
     data(){
@@ -15,7 +17,11 @@ export default{
         childFun(params){
             console.log(params);
             this.getChildVal = params;
-        }
+        },
+        ...mapActions(location, ["setPages"])
+    },
+    mounted(){
+        this.setPages(6)    
     }
 }
 </script>
